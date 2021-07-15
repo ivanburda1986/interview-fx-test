@@ -1,0 +1,15 @@
+.Searchbar{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(136, 196, 236);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.Searchbar input{
+    margin-left: 1em;
+    border: 2px solid rgb(72, 140, 185);
+    border-radius: 5px;
+    padding: 0.25em 0.5em;
+}
