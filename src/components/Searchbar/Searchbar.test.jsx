@@ -1,8 +1,11 @@
 import {render, screen} from '@testing-library/react';
-import App from '../../App';
+import ProviderWrapper from '../../testUtils/ProviderWrapper';
+import Searchbar from '../Searchbar/Searchbar';
+
+
 
 test("the search bar with a search field is displayed upon load", ()=>{
-    render(<App/>);
+    render(<ProviderWrapper><Searchbar/></ProviderWrapper>);
     const searchBar = screen.getByText(/Search/i);
     expect(searchBar).toBeInTheDocument();
     const searchField = screen.getByPlaceholderText("Currency name");
