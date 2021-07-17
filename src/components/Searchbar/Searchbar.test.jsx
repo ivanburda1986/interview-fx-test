@@ -2,8 +2,6 @@ import {render, screen} from '@testing-library/react';
 import ProviderWrapper from '../../testUtils/ProviderWrapper';
 import Searchbar from '../Searchbar/Searchbar';
 
-
-
 test("the search bar with a search field is displayed upon load", ()=>{
     render(<ProviderWrapper><Searchbar/></ProviderWrapper>);
     const searchBar = screen.getByText(/Search/i);

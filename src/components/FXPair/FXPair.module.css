@@ -1,0 +1,13 @@
+.FXPair{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+
+.Flag{
+    width: 15%;
+}

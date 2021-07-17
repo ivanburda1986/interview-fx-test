@@ -1,18 +1,19 @@
-import {render, screen} from '@testing-library/react';
-import App from '../../App';
-import FXPair from './FXPair';
+import { render, screen, waitFor } from "@testing-library/react";
+import ProviderWrapper from "../../testUtils/ProviderWrapper";
+import FXPair from "./FXPair";
 
-test("A currency pair shows the related country flag", async()=>{
-    const currencyCode = "CZK"
-    render(<FXPair currency={currencyCode}/>);
-    const flag = await screen.findByAltText(/^[A-Z]{3}-flag$/);
-    expect(flag).toBeInTheDocument();
+test("Flag gets displayed for the currency-related country", async () => {
+  const currencyCode = "CZK";
+  render(
+    <ProviderWrapper>
+      <FXPair currency={currencyCode} />
+    </ProviderWrapper>
+  );
+  await waitFor(() => {
+    expect(screen.getByAltText(/^[a-z]{2}-flag$/)).toBeInTheDocument();
+  });
 });
 
-test("A currency pair shows the text 1 USD", ()=>{
+test("A currency pair shows the text 1 USD", () => {});
 
-});
-
-test("A currency pair shows how much of the specific currency equals to 1 USD", ()=>{
-
-});
+test("A currency pair shows how much of the specific currency equals to 1 USD", () => {});
