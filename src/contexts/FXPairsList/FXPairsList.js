@@ -1,16 +1,20 @@
-import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import{handleLoadServerFXPairs} from '../../actions/fxPairs';
+import { handleLoadServerFXPairs } from "../../actions/fxPairs";
 
-import FXPair from '../../components/FXPair/FXPair';
+import FXPair from "../../components/FXPair/FXPair";
 
-export default function FXPairsList(){
-const dispatch = useDispatch();
+export default function FXPairsList() {
+  const dispatch = useDispatch();
 
-React.useEffect(()=>{
-dispatch(handleLoadServerFXPairs());
-},[dispatch]);
+  React.useEffect(() => {
+    dispatch(handleLoadServerFXPairs());
+  }, [dispatch]);
 
-return(<div><FXPair currencyCode={"CZK"}/></div>);
+  return (
+    <div>
+      <FXPair currencyCode={"HUF"} />
+    </div>
+  );
 }
