@@ -1,13 +1,13 @@
-.Header{
-    height: 80px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color:rgb(72, 140, 185);
-    color: #fff;
-    font-weight: 600;
-    font-size: 2rem;
+.Header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(72, 140, 185);
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
 }

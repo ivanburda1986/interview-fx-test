@@ -1,13 +1,41 @@
-.FXPair{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
-    padding: 0.5em 1em;
-    width: 100%;
+.FXPair {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(72, 140, 185);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  margin-bottom: 0.5em;
+  width: 85%;
+  max-width: 750px;
+  color: rgb(72, 140, 185);
+  font-weight: 600;
 }
 
-.Flag{
-    width: 15%;
+.Flag {
+  width: 15%;
+}
+
+.CurrencyToBuy {
+  margin-right: auto;
+  margin-left: 1em;
+}
+
+.CurrencyName {
+  width: 20%;
+  margin: 0 auto;
+  text-align: start;
+}
+
+.FXMiddle {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .CurrencyName {
+    display: none;
+  }
 }
