@@ -9,7 +9,7 @@ test("Flag gets displayed for the currency-related country", async () => {
     </ProviderWrapper>
   );
 
-  await waitFor(() => {
+  await waitFor(async () => {
     screen.getByAltText("hu-flag");
   });
   expect(screen.getByAltText("hu-flag")).toBeInTheDocument();
