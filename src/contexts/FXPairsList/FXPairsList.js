@@ -19,10 +19,5 @@ export default function FXPairsList() {
     return fxPairs.map((pair) => <FXPair currencyCode={pair.currency} key={pair.currency} />);
   };
 
-  return (
-    <div className={classes.FXPairs}>
-      <FXPair currencyCode={"SEK"} />
-      {displayFXPairs()}
-    </div>
-  );
+  return <div className={classes.FXPairs}>{displayFXPairs()}</div>;
 }
