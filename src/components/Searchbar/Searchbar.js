@@ -22,8 +22,7 @@ const Searchbar = ({ history }) => {
   }, [location]);
 
   const handleSearchViaURL = () => {
-    let regexHash = /#/gi;
-    setSearchString(location.hash.replaceAll(regexHash, ""));
+    setSearchString(location.hash.replaceAll(/#/gi, ""));
     dispatch(filterFXPairs({ searchHash: location.hash }));
   };
 
