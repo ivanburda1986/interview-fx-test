@@ -20,9 +20,9 @@ export function handleLoadServerFXPairs() {
 }
 
 //FILTER_FXPAIRS
-export function filterFXPairs(searchString) {
+export function filterFXPairs({ hash }) {
   return {
     type: FILTER_FXPAIRS,
-    searchString,
+    hash,
   };
 }

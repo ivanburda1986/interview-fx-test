@@ -1,18 +1,24 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import classes from "./Searchbar.module.css";
 
 import { filterFXPairs } from "../../actions/fxPairs";
 
-const Searchbar = () => {
+const Searchbar = ({ history }) => {
   const dispatch = useDispatch();
   const searchString = useSelector((state) => state.fxPairs.searchString);
 
+  //Reset the URL has upon reload
+  React.useEffect(() => {
+    window.location.hash = "";
+  }, []);
+
   const handleSearchRequest = (e) => {
     e.preventDefault();
-    dispatch(filterFXPairs(e.target.value));
-    //window.location.hash = e.target.value;
+    window.location.hash = e.target.value;
+    dispatch(filterFXPairs({ hash: history.location.hash }));
   };
 
   return (
@@ -23,4 +29,4 @@ const Searchbar = () => {
   );
 };
 
-export default Searchbar;
+export default withRouter(Searchbar);
