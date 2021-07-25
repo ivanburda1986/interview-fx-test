@@ -18,13 +18,14 @@ const filterFXPairs = function (fxPairs, filterString) {
   console.log("codeFiltered", codeFiltered);
 };
 
-export default function fxPairs(state = {}, action) {
+export default function fxPairs(state = { data: {} }, action) {
   switch (action.type) {
     case LOAD_FXPAIRS:
       let validatedFXPairs = validateFXPairs(action.fxPairs.fx);
       return {
         ...state,
-        ...validatedFXPairs,
+        data: { ...validatedFXPairs },
+        backup: { ...validatedFXPairs },
       };
     case FILTER_FXPAIRS:
       let filteredFXPairs = filterFXPairs(state, action.hash);
@@ -33,6 +34,6 @@ export default function fxPairs(state = {}, action) {
       };
 
     default:
-      return state;
+      return { ...state };
   }
 }

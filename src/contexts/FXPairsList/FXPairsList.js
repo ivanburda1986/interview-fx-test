@@ -9,7 +9,7 @@ import classes from "./FXPairs.module.css";
 
 export default function FXPairsList() {
   const dispatch = useDispatch();
-  const fxPairs = Object.values(useSelector((state) => state.fxPairs));
+  const fxPairs = Object.values(useSelector((state) => state.fxPairs.data));
 
   React.useEffect(() => {
     dispatch(handleLoadServerFXPairs());

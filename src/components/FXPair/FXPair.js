@@ -6,7 +6,7 @@ import classes from "./FXPair.module.css";
 import placeholderFlag from "../../flags/placeholderFlag.png";
 
 const FXPair = ({ currencyCode }) => {
-  const fxPair = Object.values(useSelector((state) => state.fxPairs)).filter((pair) => pair.currency === currencyCode)[0];
+  const fxPair = Object.values(useSelector((state) => state.fxPairs.data)).filter((pair) => pair.currency === currencyCode)[0];
   const [fXRate, setFXRate] = React.useState(1.0);
   const [flagImgSrc, setFlagImgSrc] = React.useState("");
   const [imgAlt, setImgAlt] = React.useState("");
