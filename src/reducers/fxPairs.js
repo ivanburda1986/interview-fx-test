@@ -16,8 +16,7 @@ const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
     let relevantCurrencyCodePart = pair.currency.toUpperCase().replaceAll(regexSpace, "").slice(0, filterBy.length);
     let relevantCurrencyNamePart = pair.nameI18N.toUpperCase().split(" ");
     //console.log(relevantCurrencyCodePart);
-    console.log(relevantCurrencyNamePart);
-    //console.log("Name part", pair.nameI18N.slice(0, filterBy.length).toUpperCase().replace(/\s+/g, ""));
+    //console.log(relevantCurrencyNamePart);
     return relevantCurrencyCodePart === filterBy || relevantCurrencyNamePart.some((word) => word.slice(0, filterBy.length) === filterBy);
   });
   return results;
