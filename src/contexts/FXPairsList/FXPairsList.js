@@ -5,12 +5,13 @@ import { handleLoadServerFXPairs } from "../../actions/fxPairs";
 
 import FXPair from "../../components/FXPair/FXPair";
 
-import classes from "./FXPairs.module.css";
+import classes from "./FXPairsList.module.css";
 
 export default function FXPairsList() {
   const dispatch = useDispatch();
   const fxPairs = Object.values(useSelector((state) => state.fxPairs.data));
 
+  //Request FX data
   React.useEffect(() => {
     dispatch(handleLoadServerFXPairs());
   }, [dispatch]);
@@ -18,7 +19,7 @@ export default function FXPairsList() {
   const displayFXPairs = () => {
     let display = fxPairs.map((pair) => <FXPair currencyCode={pair.currency} key={pair.currency} />);
     if (display.length === 0) {
-      display = <p>No matching currency found ... </p>;
+      display = <p>I'm sorry. I do not recognize the currency you are searching for. </p>;
     }
     return display;
   };

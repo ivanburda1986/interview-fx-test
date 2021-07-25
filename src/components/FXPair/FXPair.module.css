@@ -15,14 +15,9 @@
   font-weight: 600;
 }
 
-.Flag {
-  width: 15%;
-  margin-left: auto;
-}
-
-.CurrencyToBuy {
+.CurrencyCode {
   display: inline-block;
-  width: 15%;
+  width: 20%;
   margin-right: auto;
   text-align: center;
 }
@@ -34,8 +29,8 @@
   padding: 0 1em;
 }
 
-.FXMiddle {
-  width: 30%;
+.fXRate {
+  width: 20%;
   margin-left: auto;
 }
 

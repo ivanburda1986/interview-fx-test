@@ -1,39 +1,38 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
-
-import classes from "./Searchbar.module.css";
 
 import { filterFXPairs } from "../../actions/fxPairs";
 
+import classes from "./Searchbar.module.css";
+
 const Searchbar = ({ history }) => {
   const dispatch = useDispatch();
+  const location = useLocation();
   const [searchString, setSearchString] = React.useState("");
-  //console.log("searchString", searchString);
 
-  //Reset the URL has upon reload
+  //Removes from the URL search hash upon page reload
   React.useEffect(() => {
     window.location.hash = "";
   }, []);
 
+  //Trigger searching based on the URL-hash change
   React.useEffect(() => {
-    //Filter based on URL-hash change
-    window.addEventListener("hashchange", handleSearchViaURL);
-  });
+    handleSearchViaURL();
+  }, [location]);
 
-  //Handle search via URL
   const handleSearchViaURL = () => {
     let regexHash = /#/gi;
-    setSearchString(history.location.hash.replaceAll(regexHash, ""));
-    dispatch(filterFXPairs({ searchHash: history.location.hash }));
+    setSearchString(location.hash.replaceAll(regexHash, ""));
+    dispatch(filterFXPairs({ searchHash: location.hash }));
   };
 
-  //Handle search via input field
+  //Trigger searching based on the Search input field change
   const handleSearchViaInputField = (e) => {
     e.preventDefault();
     window.location.hash = e.target.value;
     setSearchString(e.target.value);
-    dispatch(filterFXPairs({ searchHash: history.location.hash }));
+    dispatch(filterFXPairs({ searchHash: location.hash }));
   };
 
   return (
