@@ -5,10 +5,21 @@
   display: flex;
   flex-direction: row;
   background-color: rgb(136, 196, 236);
-  justify-content: flex-start;
+  color: #fff;
+  font-weight: 600;
+  justify-content: center;
   align-items: center;
   padding: 0.5em 1em;
   margin-bottom: 1em;
+}
+
+.SearchbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 750px;
 }
 
 .Searchbar input {
