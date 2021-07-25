@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import ProviderWrapper from "../../testUtils/ProviderWrapper";
-import FXPair from "./FXPair";
+import ProviderWrapper from "../../src/testUtils/ProviderWrapper";
+import FXPair from "../../src/components/FXPair/FXPair";
 
 test("Flag gets displayed for the currency-related country", async () => {
   render(
