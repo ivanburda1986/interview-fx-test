@@ -39,7 +39,7 @@ const Searchbar = ({ history }) => {
   return (
     <div className={classes.Searchbar}>
       <label htmlFor="searchbar">Search</label>
-      <input type="text" id="searchbar" placeholder="Currency name" value={searchString} onChange={(e) => handleSearchViaInputField(e)} />
+      <input type="text" id="searchbar" placeholder="Currency code or name" value={searchString} onChange={(e) => handleSearchViaInputField(e)} />
     </div>
   );
 };
