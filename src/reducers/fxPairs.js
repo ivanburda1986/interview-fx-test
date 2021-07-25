@@ -5,15 +5,22 @@ const validateFXPairs = function (fxPairs) {
   return fxPairs.filter((pair) => pair.currency.replace(/\s+/g, "").length === 3 && pair.nameI18N !== undefined && pair.exchangeRate !== undefined);
 };
 
-const filterFXPairs = function ({ fxPairs, filterString }) {
-  let filterBy = filterString.slice(1).toUpperCase();
-  console.log("FilterBy:", filterBy);
+const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
+  let regexSpace = /%20/gi;
+  let regexHash = /#/gi;
+  let filterBy = filterString.replaceAll(regexSpace, "").replaceAll(regexHash, "").toUpperCase();
+  //console.log("-----------------------------------------------------------");
+  //console.log("FilterBy:", filterBy);
 
-  let codeFiltered = Object.values(fxPairs).filter((pair) => {
-    let relevant = pair.currency.slice(0, filterBy.length);
-    return relevant === filterBy;
+  let results = Object.values(fxPairs).filter((pair) => {
+    let relevantCurrencyCodePart = pair.currency.toUpperCase().replaceAll(regexSpace, "").slice(0, filterBy.length);
+    let relevantCurrencyNamePart = pair.nameI18N.toUpperCase().replaceAll(regexSpace, "");
+    //console.log(relevantCurrencyCodePart);
+    //console.log(relevantCurrencyNamePart);
+    //console.log("Name part", pair.nameI18N.slice(0, filterBy.length).toUpperCase().replace(/\s+/g, ""));
+    return relevantCurrencyCodePart === filterBy || relevantCurrencyNamePart.includes(filterBy);
   });
-  return codeFiltered;
+  return results;
 };
 
 export default function fxPairs(state = { data: {} }, action) {
@@ -26,7 +33,7 @@ export default function fxPairs(state = { data: {} }, action) {
         backup: { ...validatedFXPairs },
       };
     case FILTER_FXPAIRS:
-      let filteredFXPairs = filterFXPairs({ fxPairs: { ...state.backup }, filterString: action.hash });
+      let filteredFXPairs = filterFXByCodeAndName({ fxPairs: { ...state.backup }, filterString: action.hash });
       return {
         ...state,
         data: { ...filteredFXPairs },

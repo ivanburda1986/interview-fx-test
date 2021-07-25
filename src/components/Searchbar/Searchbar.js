@@ -8,23 +8,38 @@ import { filterFXPairs } from "../../actions/fxPairs";
 
 const Searchbar = ({ history }) => {
   const dispatch = useDispatch();
-  const searchString = useSelector((state) => state.fxPairs.searchString);
+  const [searchString, setSearchString] = React.useState("");
+  //console.log("searchString", searchString);
 
   //Reset the URL has upon reload
   React.useEffect(() => {
     window.location.hash = "";
   }, []);
 
-  const handleSearchRequest = (e) => {
+  React.useEffect(() => {
+    //Filter based on URL-hash change
+    window.addEventListener("hashchange", handleSearchViaURL);
+  });
+
+  //Handle search via URL
+  const handleSearchViaURL = () => {
+    let regexHash = /#/gi;
+    setSearchString(history.location.hash.replaceAll(regexHash, ""));
+    dispatch(filterFXPairs({ hash: history.location.hash }));
+  };
+
+  //Handle search via input field
+  const handleSearchViaInputField = (e) => {
     e.preventDefault();
     window.location.hash = e.target.value;
+    setSearchString(e.target.value);
     dispatch(filterFXPairs({ hash: history.location.hash }));
   };
 
   return (
     <div className={classes.Searchbar}>
       <label htmlFor="searchbar">Search</label>
-      <input type="text" id="searchbar" placeholder="Currency name" value={searchString} onChange={(e) => handleSearchRequest(e)} />
+      <input type="text" id="searchbar" placeholder="Currency name" value={searchString} onChange={(e) => handleSearchViaInputField(e)} />
     </div>
   );
 };
