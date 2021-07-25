@@ -25,7 +25,7 @@ const Searchbar = ({ history }) => {
   const handleSearchViaURL = () => {
     let regexHash = /#/gi;
     setSearchString(history.location.hash.replaceAll(regexHash, ""));
-    dispatch(filterFXPairs({ hash: history.location.hash }));
+    dispatch(filterFXPairs({ searchHash: history.location.hash }));
   };
 
   //Handle search via input field
@@ -33,7 +33,7 @@ const Searchbar = ({ history }) => {
     e.preventDefault();
     window.location.hash = e.target.value;
     setSearchString(e.target.value);
-    dispatch(filterFXPairs({ hash: history.location.hash }));
+    dispatch(filterFXPairs({ searchHash: history.location.hash }));
   };
 
   return (

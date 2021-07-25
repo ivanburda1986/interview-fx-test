@@ -32,7 +32,7 @@ export default function fxPairs(state = { data: {} }, action) {
         backup: { ...validatedFXPairs },
       };
     case FILTER_FXPAIRS:
-      let filteredFXPairs = filterFXByCodeAndName({ fxPairs: { ...state.backup }, filterString: action.hash });
+      let filteredFXPairs = filterFXByCodeAndName({ fxPairs: { ...state.backup }, filterString: action.searchHash });
       return {
         ...state,
         data: { ...filteredFXPairs },
