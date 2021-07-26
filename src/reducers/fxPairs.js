@@ -3,7 +3,6 @@ import { LOAD_FXPAIRS, FILTER_FXPAIRS } from "../actions/fxPairs";
 //Helping functions
 
 const validateFXPairs = function (fxPairs) {
-  console.log(fxPairs.forEach((pair) => console.log(pair.exchangeRate)));
   return fxPairs.filter((pair) => pair.currency.replace(/\s+/g, "").length === 3 && pair.nameI18N !== undefined && pair.exchangeRate !== undefined && pair.exchangeRate.middle);
 };
 
