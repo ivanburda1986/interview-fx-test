@@ -30,8 +30,9 @@
 }
 
 .fXRate {
-  width: 20%;
+  width: 40%;
   margin-left: auto;
+  text-align: right;
 }
 
 @media screen and (max-width: 500px) {

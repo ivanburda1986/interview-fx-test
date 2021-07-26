@@ -35,7 +35,7 @@ const FXPair = ({ currencyCode }) => {
       <img src={flagImgSrc} alt={imgAlt} />
       <p className={classes.CurrencyCode}>{currencyCode}</p>
       <p className={classes.CurrencyName}>{currencyName}</p>
-      <p className={classes.fXRate}>EUR {(1 / fXRate).toFixed(3)}</p>
+      <p className={classes.fXRate}>{fXRate.toFixed(2)} / € </p>
     </div>
   );
 };
