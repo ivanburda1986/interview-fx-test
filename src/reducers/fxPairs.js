@@ -2,7 +2,7 @@ import { LOAD_FXPAIRS, FILTER_FXPAIRS } from "../actions/fxPairs";
 
 //Helping functions
 
-const validateFXPairs = function (fxPairs) {
+const validateFXPairs = (fxPairs) => {
   return fxPairs.filter((pair) => pair.currency.replace(/\s+/g, "").length === 3 && pair.nameI18N !== undefined && pair.exchangeRate !== undefined && pair.exchangeRate.middle);
 };
 
@@ -23,7 +23,7 @@ const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
 export default function fxPairs(state = { data: {} }, action) {
   switch (action.type) {
     case LOAD_FXPAIRS:
-      let validatedFXPairs = validateFXPairs(action.fxPairs.fx);
+      let validatedFXPairs = validateFXPairs(action.fxPairs.fx.slice(0, 10));
       return {
         ...state,
         data: { ...validatedFXPairs },
@@ -40,3 +40,5 @@ export default function fxPairs(state = { data: {} }, action) {
       return { ...state };
   }
 }
+
+export { validateFXPairs };
