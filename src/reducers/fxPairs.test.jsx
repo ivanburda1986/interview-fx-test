@@ -9,7 +9,7 @@ describe("Returns only foreign-currency-rate pairs which are valid for the purpo
   test("Excludes currencies with a missing middle rate", () => {});
 });
 
-//TEST DATA
+//TEST DATA --
 
 //Invalid currency code
 const INVALID_CODE1 = { currency: "   ", precision: 2, banknoteRate: { buy: 882.5, middle: 882.5, sell: 882.5, indicator: 0, lastModified: "2008-08-06T22:00:00Z" }, flags: ["provided"] };
