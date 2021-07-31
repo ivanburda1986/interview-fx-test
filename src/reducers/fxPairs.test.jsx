@@ -1,6 +1,6 @@
 import { validateFXPairs, filterFXByCodeAndName } from "./fxPairs";
 
-describe("Returns only foreign-currency-rate pairs which are valid for the purpose of the app", () => {
+describe("Takes foreign-currency-rate pairs and returns only those which are valid for the purpose of the app", () => {
   test("Excludes currencies with a code that does not have 3 characters", () => {
     expect(validateFXPairs([INVALID_CODE1, INVALID_CODE2, INVALID_CODE3, INVALID_CODE4, VALID])).toEqual([VALID]);
   });
@@ -13,6 +13,10 @@ describe("Returns only foreign-currency-rate pairs which are valid for the purpo
   test("Excludes currencies with a missing middle rate", () => {
     expect(validateFXPairs([MISSING_MIDDLE_RATE, VALID])).toEqual([VALID]);
   });
+});
+
+describe("Real-time currency search returns currencies matching the search criteria", () => {
+  test("", () => {});
 });
 
 //TEST DATA
