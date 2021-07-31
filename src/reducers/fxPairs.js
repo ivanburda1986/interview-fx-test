@@ -10,11 +10,15 @@ const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
   let regexHash = /#/gi;
   let regexURLSpace = /%20/gi;
   let filterBy = filterString.replaceAll(regexURLSpace, "").replaceAll(regexHash, "").toLowerCase();
-  console.log(fxPairs);
   let results = Object.values(fxPairs).filter((pair) => {
     let relevantCurrencyCodePart = pair.currency.toLowerCase().slice(0, filterBy.length);
     let currencyNameIndividualWords = pair.nameI18N.toLowerCase().split(" ");
-    return relevantCurrencyCodePart === filterBy || currencyNameIndividualWords.some((word) => word.slice(0, filterBy.length) === filterBy);
+    let currencyNameConjoinedPart = pair.nameI18N.replaceAll(" ", "").toLowerCase().slice(0, filterBy.length);
+    /*     console.log("relevantCurrencyCodePart", relevantCurrencyCodePart);
+    console.log("currencyNameIndividualWords", currencyNameIndividualWords);
+    console.log("currencyNameConjoinedPart", currencyNameConjoinedPart);
+    console.log("filterBy", filterBy); */
+    return relevantCurrencyCodePart === filterBy || currencyNameIndividualWords.some((word) => word.slice(0, filterBy.length) === filterBy) || currencyNameConjoinedPart === filterBy;
   });
   return results;
 };
