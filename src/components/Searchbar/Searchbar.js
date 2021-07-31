@@ -19,10 +19,10 @@ const Searchbar = () => {
   //Trigger searching based on the URL-hash change
   React.useEffect(() => {
     handleSearchViaURL();
-  }, [location]);
+  }, [location.hash]);
 
   const handleSearchViaURL = () => {
-    setSearchString(location.hash.replaceAll(/#/gi, ""));
+    setSearchString(location.hash.replaceAll(/#/gi, "").replaceAll(/%20/gi, " "));
     dispatch(filterFXPairs({ searchHash: location.hash }));
   };
 
@@ -31,7 +31,7 @@ const Searchbar = () => {
     e.preventDefault();
     window.location.hash = e.target.value;
     setSearchString(e.target.value);
-    dispatch(filterFXPairs({ searchHash: location.hash }));
+    dispatch(filterFXPairs({ searchHash: window.location.hash }));
   };
 
   return (
