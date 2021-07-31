@@ -7,7 +7,6 @@ const validateFXPairs = (fxPairs) => {
 };
 
 const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
-  console.log(fxPairs);
   let regexHash = /#/gi;
   let regexURLSpace = /%20/gi;
   let filterBy = filterString.replaceAll(regexURLSpace, "").replaceAll(regexHash, "").toLowerCase();
@@ -18,7 +17,6 @@ const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
     let currencyNameConjoinedPart = pair.nameI18N.replaceAll(" ", "").toLowerCase().slice(0, filterBy.length);
     return relevantCurrencyCodePart === filterBy || currencyNameIndividualWords.some((word) => word.slice(0, filterBy.length) === filterBy) || currencyNameConjoinedPart === filterBy;
   });
-  console.log(results);
   return results;
 };
 
