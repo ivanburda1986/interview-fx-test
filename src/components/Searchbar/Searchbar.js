@@ -6,7 +6,7 @@ import { filterFXPairs } from "../../actions/fxPairs";
 
 import classes from "./Searchbar.module.css";
 
-const Searchbar = ({ history }) => {
+const Searchbar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const [searchString, setSearchString] = React.useState("");

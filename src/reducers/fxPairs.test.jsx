@@ -16,7 +16,7 @@ describe("Takes foreign-currency-rate pairs and returns only those which are val
 });
 
 describe("Real-time currency search returns currencies matching the search criteria", () => {
-  test("", () => {});
+  test("Searching by a single letter returns all currencies ", () => {});
 });
 
 //TEST DATA

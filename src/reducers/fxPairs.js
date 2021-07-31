@@ -10,7 +10,7 @@ const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
   let regexHash = /#/gi;
   let regexURLSpace = /%20/gi;
   let filterBy = filterString.replaceAll(regexURLSpace, "").replaceAll(regexHash, "").toLowerCase();
-
+  console.log(fxPairs);
   let results = Object.values(fxPairs).filter((pair) => {
     let relevantCurrencyCodePart = pair.currency.toLowerCase().slice(0, filterBy.length);
     let currencyNameIndividualWords = pair.nameI18N.toLowerCase().split(" ");
@@ -23,7 +23,7 @@ const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
 export default function fxPairs(state = { data: {} }, action) {
   switch (action.type) {
     case LOAD_FXPAIRS:
-      let validatedFXPairs = validateFXPairs(action.fxPairs.fx.slice(0, 10));
+      let validatedFXPairs = validateFXPairs(action.fxPairs.fx);
       return {
         ...state,
         data: { ...validatedFXPairs },
