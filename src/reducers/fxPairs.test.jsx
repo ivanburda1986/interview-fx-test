@@ -16,7 +16,9 @@ describe("Takes foreign-currency-rate pairs and returns only those which are val
 });
 
 describe("Real-time currency search returns currencies matching the search criteria", () => {
-  test("Searching by a single letter returns all currencies ", () => {});
+  test("Entering a single letter returns all currencies with the currency code or any word of the currency name starting by the letter", () => {
+    expect(filterFXByCodeAndName({ fxPairs: VALID, filterString: "c" })).toEqual(VALID);
+  });
 });
 
 //TEST DATA
@@ -64,11 +66,5 @@ const MISSING_MIDDLE_RATE = {
 const VALID = {
   currency: "CZK",
   nameI18N: "Czech Koruna",
-  exchangeRate: { buy: 25.575, middle: 25.925, sell: 26.275, indicator: 0, lastModified: "2018-11-08T23:00:00Z" },
-};
-
-const VALID2 = {
-  currency: "MXN",
-  nameI18N: "Mexican Peso",
   exchangeRate: { buy: 25.575, middle: 25.925, sell: 26.275, indicator: 0, lastModified: "2018-11-08T23:00:00Z" },
 };
