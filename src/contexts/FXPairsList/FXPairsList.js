@@ -10,7 +10,7 @@ import classes from "./FXPairsList.module.css";
 export default function FXPairsList() {
   const dispatch = useDispatch();
   const fxPairs = Object.values(useSelector((state) => state.fxPairs.data));
-  const backup = useSelector((state) => state.fxPairs.backup);
+  //const backup = useSelector((state) => state.fxPairs.backup);
 
   //Request FX data
   React.useEffect(() => {

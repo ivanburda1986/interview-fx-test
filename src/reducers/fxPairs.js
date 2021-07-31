@@ -7,6 +7,7 @@ const validateFXPairs = (fxPairs) => {
 };
 
 const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
+  console.log(filterString);
   let regexHash = /#/gi;
   let regexURLSpace = /%20/gi;
   let filterBy = filterString.replaceAll(regexURLSpace, "").replaceAll(regexHash, "").toLowerCase();
