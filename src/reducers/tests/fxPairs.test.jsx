@@ -28,7 +28,16 @@ describe("Real-time currency search returns currencies matching the search crite
     expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "cad" })).toEqual([FX.CAD]);
   });
   test("Entering a set of letters returns all currencies with the currency code matching the letters or any word of the currency name starting by the letters", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "kro" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "kRo" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK]);
+  });
+  test("Search by currency name is case-insensitive", () => {
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "pOuNd" })).toEqual([FX.LBP, FX.SYP, FX.GBP, FX.EGP]);
+  });
+  test("Search by currency code is case-insensitive", () => {
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "cZk" })).toEqual([FX.CZK]);
+  });
+  test("Search ignores any spacing", () => {
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "mExIcA n Pe   SO" })).toEqual([FX.MXN]);
   });
 });
 

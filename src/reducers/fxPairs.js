@@ -9,7 +9,7 @@ const validateFXPairs = (fxPairs) => {
 const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
   let regexHash = /#/gi;
   let regexURLSpace = /%20/gi;
-  let filterBy = filterString.replaceAll(regexURLSpace, "").replaceAll(regexHash, "").toLowerCase();
+  let filterBy = filterString.replaceAll(regexURLSpace, "").replaceAll(" ", "").replaceAll(regexHash, "").toLowerCase();
 
   let results = Object.values(fxPairs).filter((pair) => {
     let relevantCurrencyCodePart = pair.currency.toLowerCase().slice(0, filterBy.length);
