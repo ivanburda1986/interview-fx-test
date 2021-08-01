@@ -30,6 +30,9 @@ describe("Real-time currency search returns currencies matching the search crite
   test("Entering a set of letters returns all currencies with the currency code matching the letters or any word of the currency name starting by the letters", () => {
     expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "kRo" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK]);
   });
+  test("Search ignores any sub-string matches", () => {
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "so" })).toEqual([FX.ZAR, FX.KRW, FX.PEN]);
+  });
   test("Search by currency name is case-insensitive", () => {
     expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "pOuNd" })).toEqual([FX.LBP, FX.SYP, FX.GBP, FX.EGP]);
   });
