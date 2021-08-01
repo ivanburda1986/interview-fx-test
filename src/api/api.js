@@ -5,7 +5,6 @@ export async function loadServerFXPairs() {
   if (response.ok) {
     return fxPairs;
   } else {
-    //Propagate the error to the redux store and have an error message in the up popping up if the store receives an error
     console.log(response.status, response.statusText);
   }
 }
