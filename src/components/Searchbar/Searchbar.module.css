@@ -4,7 +4,7 @@
   left: 0;
   display: flex;
   flex-direction: row;
-  background-color: rgb(136, 196, 236);
+  background-color: var(--light);
   color: #fff;
   font-weight: 600;
   justify-content: center;
@@ -24,7 +24,7 @@
 
 .Searchbar input {
   margin-left: 1em;
-  border: 2px solid rgb(72, 140, 185);
+  border: 2px solid var(--dark);
   border-radius: 5px;
   padding: 0.5em 0.5em;
 }
@@ -38,5 +38,5 @@
 }
 
 .SearchbarContainer i:hover {
-  color: rgb(72, 140, 185);
+  color: var(--dark);
 }

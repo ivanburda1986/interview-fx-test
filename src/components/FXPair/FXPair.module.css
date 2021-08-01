@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgb(72, 140, 185);
+  border: 1px solid var(--dark);
   border-radius: 5px;
   padding: 0.5em 1em;
   margin-left: 0.25em;
@@ -11,7 +11,7 @@
   margin-bottom: 0.5em;
   width: 85%;
   max-width: 750px;
-  color: rgb(72, 140, 185);
+  color: var(--dark);
   font-weight: 600;
 }
 
