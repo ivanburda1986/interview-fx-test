@@ -1,6 +1,6 @@
-import { validateFXPairs, filterFXByCodeAndName } from "./fxPairs";
-import validFXPairsMocked from "./tests/fxPairs-validated-mock.json";
-import FX from "./tests/fxPairs-validated-named";
+import { validateFXPairs, filterFXByCodeAndName } from "../fxPairs";
+import validFXPairsMocked from "./fxPairs-validated-mock.json";
+import FX from "./fxPairs-validated-named";
 
 describe("Takes foreign-currency-rate pairs and returns only those which are valid for the purpose of the app", () => {
   test("Excludes currencies with a code that does not have 3 characters", () => {
@@ -23,6 +23,12 @@ describe("Real-time currency search returns currencies matching the search crite
   });
   test("Entering 2 letters returns all currencies with the currency code or any word of the currency name starting by the 2 letters", () => {
     expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "kr" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK, FX.KRW]);
+  });
+  test("Entering 3 letters returns all currencies with the currency code matching the letters or any word of the currency name starting by the 3 letters", () => {
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "cad" })).toEqual([FX.CAD]);
+  });
+  test("Entering a set of letters returns all currencies with the currency code matching the letters or any word of the currency name starting by the letters", () => {
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "kro" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK]);
   });
 });
 
@@ -65,6 +71,7 @@ const MISSING_EXCHANGE_RATES = {
 const MISSING_MIDDLE_RATE = {
   currency: "MED",
   nameI18N: "Middle Earth Dollar",
+  exchangeRate: { buy: 25.575, sell: 26.275, indicator: 0, lastModified: "2018-11-08T23:00:00Z" },
 };
 
 //Valid currency
