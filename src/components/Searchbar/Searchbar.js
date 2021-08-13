@@ -42,7 +42,7 @@ const Searchbar = () => {
           <input type="text" id="searchbar" placeholder="Currency code or name" value={searchString} onChange={(e) => handleSearchViaInputField(e)} />
         </div>
         <a href="https://github.com/ivanburda1986/interview-fx-test" target="_blank">
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </a>
       </div>
     </div>
