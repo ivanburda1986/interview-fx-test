@@ -26,7 +26,7 @@ const Searchbar = () => {
     e.preventDefault();
     window.location.hash = e.target.value;
     setSearchString(e.target.value);
-    dispatch(filterFXPairs({ searchHash: window.location.hash }));
+    dispatch(filterFXPairs({ searchHash: location.hash }));
   };
 
   return (
