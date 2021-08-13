@@ -11,11 +11,6 @@ const Searchbar = () => {
   const location = useLocation();
   const [searchString, setSearchString] = React.useState("");
 
-  //Removes from the URL search hash upon page reload
-  React.useEffect(() => {
-    window.location.hash = "";
-  }, []);
-
   //Trigger searching based on the URL-hash change
   React.useEffect(() => {
     handleSearchViaURL();
