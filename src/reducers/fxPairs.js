@@ -20,7 +20,7 @@ const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
 };
 
 //Reducer
-export default function fxPairs(state = { data: {} }, action) {
+export default function fxPairs(state = { data: {}, backup: {} }, action) {
   switch (action.type) {
     case LOAD_FXPAIRS:
       let validatedFXPairs = validateFXPairs(action.fxPairs.fx);
