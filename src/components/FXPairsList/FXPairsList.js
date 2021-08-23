@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { handleLoadServerFXPairs } from "../../actions/fxPairs";
 
-import FXPair from "../../components/FXPair/FXPair";
+import FXPair from "../FXPair/FXPair";
 
 import classes from "./FXPairsList.module.css";
 
