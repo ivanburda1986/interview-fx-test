@@ -46,4 +46,3 @@ const Searchbar = () => {
 };
 
 export default withRouter(Searchbar);
-...
