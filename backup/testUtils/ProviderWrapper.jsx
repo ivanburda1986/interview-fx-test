@@ -1,5 +1,5 @@
-import reducer from "../reducers/index";
-import middleware from "../middleware/index";
+import reducer from "../../src/reducers/index";
+import middleware from "../../src/middleware/index";
 import { createStore, compose } from "redux";
 import { Provider } from "react-redux";
 

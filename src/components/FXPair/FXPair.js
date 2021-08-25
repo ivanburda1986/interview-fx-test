@@ -28,7 +28,7 @@ const FXPair = ({ currencyCode }) => {
       setFXRate(fxPair.exchangeRate.middle);
       setCurrencyName(fxPair.nameI18N);
     }
-  }, [fxPair, flagImgSrc, imgAlt, fXRate]);
+  }, [fxPair]);
 
   return (
     <div className={classes.FXPair}>

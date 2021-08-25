@@ -8,19 +8,19 @@ const validateFXPairs = (fxPairs) => {
 const filterFXByCodeAndName = function ({ fxPairs, filterString }) {
   let regexHash = /#/gi;
   let regexURLSpace = /%20/gi;
-  let filterBy = filterString.replaceAll(regexURLSpace, "").replaceAll(" ", "").replaceAll(regexHash, "").toLowerCase();
+  let filterBy = filterString.replace(regexURLSpace, "").replace(/\s+/g, "").replace(regexHash, "").toLowerCase();
 
   let results = Object.values(fxPairs).filter((pair) => {
     let relevantCurrencyCodePart = pair.currency.toLowerCase().slice(0, filterBy.length);
     let currencyNameIndividualWords = pair.nameI18N.toLowerCase().split(" ");
-    let currencyNameConjoinedPart = pair.nameI18N.replaceAll(" ", "").toLowerCase().slice(0, filterBy.length);
+    let currencyNameConjoinedPart = pair.nameI18N.replace(/\s+/g, "").toLowerCase().slice(0, filterBy.length);
     return relevantCurrencyCodePart === filterBy || currencyNameIndividualWords.some((word) => word.slice(0, filterBy.length) === filterBy) || currencyNameConjoinedPart === filterBy;
   });
   return results;
 };
 
 //Reducer
-export default function fxPairs(state = { data: {} }, action) {
+export default function fxPairs(state = { data: {}, backup: {} }, action) {
   switch (action.type) {
     case LOAD_FXPAIRS:
       let validatedFXPairs = validateFXPairs(action.fxPairs.fx);

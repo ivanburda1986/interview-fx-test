@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { filterFXPairs } from "../../actions/fxPairs";
 
@@ -10,16 +10,12 @@ const Searchbar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const [searchString, setSearchString] = React.useState("");
-
-  //Removes from the URL search hash upon page reload
-  React.useEffect(() => {
-    window.location.hash = "";
-  }, []);
+  const isFXPairsInitialLoadFinished = Object.values(useSelector((state) => state.fxPairs.backup));
 
   //Trigger searching based on the URL-hash change
   React.useEffect(() => {
     handleSearchViaURL();
-  }, [location.hash]);
+  }, [location.hash, isFXPairsInitialLoadFinished]);
 
   const handleSearchViaURL = () => {
     setSearchString(location.hash.replaceAll(/#/gi, "").replaceAll(/%20/gi, " "));
@@ -31,7 +27,7 @@ const Searchbar = () => {
     e.preventDefault();
     window.location.hash = e.target.value;
     setSearchString(e.target.value);
-    dispatch(filterFXPairs({ searchHash: window.location.hash }));
+    dispatch(filterFXPairs({ searchHash: location.hash }));
   };
 
   return (
@@ -42,7 +38,7 @@ const Searchbar = () => {
           <input type="text" id="searchbar" placeholder="Currency code or name" value={searchString} onChange={(e) => handleSearchViaInputField(e)} />
         </div>
         <a href="https://github.com/ivanburda1986/interview-fx-test" target="_blank">
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </a>
       </div>
     </div>
