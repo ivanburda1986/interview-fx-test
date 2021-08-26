@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter, useLocation } from "react-router-dom";
+import { withRouter, useLocation, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { filterFXPairs } from "../../actions/fxPairs";
@@ -9,8 +9,12 @@ import classes from "./Searchbar.module.css";
 const Searchbar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
+  const params = useParams();
   const [searchString, setSearchString] = React.useState("");
   const isFXPairsInitialLoadFinished = Object.values(useSelector((state) => state.fxPairs.backup));
+
+  console.log("location", location);
+  console.log("params", params);
 
   //Trigger searching based on the URL-hash change
   React.useEffect(() => {
