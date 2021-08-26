@@ -6,3 +6,5 @@ function setFilter(filterValue) {
     filterValue,
   };
 }
+
+export { setFilter };
