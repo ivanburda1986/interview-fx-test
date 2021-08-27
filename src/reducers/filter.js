@@ -1,8 +1,8 @@
-import { SET_FILTER } from "../actions/filter";
+import { SET_FILTER_VALUE } from "../actions/filter";
 
-export default function setFilter(state = { filterValue: "" }, action) {
+export default function setFilterValue(state = { filterValue: "" }, action) {
   switch (action.type) {
-    case SET_FILTER:
+    case SET_FILTER_VALUE:
       return {
         ...state,
         filterValue: action.filterValue,

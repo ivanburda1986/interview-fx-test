@@ -1,10 +1,10 @@
-export const SET_FILTER = "SET_FILTER";
+export const SET_FILTER_VALUE = "SET_FILTER_VALUE";
 
-function setFilter(filterValue) {
+function setFilterValue(filterValue) {
   return {
-    type: SET_FILTER,
+    type: SET_FILTER_VALUE,
     filterValue,
   };
 }
 
-export { setFilter };
+export { setFilterValue };

@@ -2,15 +2,15 @@ import React from "react";
 import placeholderFlag from "../../flags/placeholderFlag.png";
 import classes from "./FXPair.module.css";
 
-const FXPair = ({ pairData }) => {
+const FXPair = ({ fxPairData }) => {
   const [flagImgSrc, setFlagImgSrc] = React.useState("");
   const [imgAlt, setImgAlt] = React.useState("");
 
   React.useEffect(() => {
     (async function fetchImg() {
-      await import(`../../flags/${pairData.currency.slice(0, 2).toLowerCase()}.png`)
+      await import(`../../flags/${fxPairData.currency.slice(0, 2).toLowerCase()}.png`)
         .then((image) => {
-          setImgAlt(`Flag of the country with the currency: ${pairData.currency}`);
+          setImgAlt(`Flag of the country with the currency: ${fxPairData.currency}`);
           setFlagImgSrc(image.default);
         })
         .catch(() => {
@@ -18,14 +18,14 @@ const FXPair = ({ pairData }) => {
           setFlagImgSrc(placeholderFlag);
         });
     })();
-  }, [pairData]);
+  }, [fxPairData]);
 
   return (
     <div className={classes.FXPair}>
       <img src={flagImgSrc} alt={imgAlt} />
-      <p className={classes.CurrencyCode}>{pairData.currencyCode}</p>
-      <p className={classes.CurrencyName}>{pairData.nameI18N}</p>
-      <p className={classes.fXRate}>{pairData.exchangeRate.middle.toFixed(2)} / € </p>
+      <p className={classes.CurrencyCode}>{fxPairData.currencyCode}</p>
+      <p className={classes.CurrencyName}>{fxPairData.nameI18N}</p>
+      <p className={classes.fXRate}>{fxPairData.exchangeRate.middle.toFixed(2)} / € </p>
     </div>
   );
 };
