@@ -1,4 +1,5 @@
-import { validateFXPairs, filterFXByCodeAndName } from "../fxPairs";
+import { validateFXPairs } from "../fxPairs";
+import { filterFXByCodeAndName } from "../../components/FXPairsList/FXPairsList";
 import validFXPairsMocked from "./fxPairs-validated-mock.json";
 import FX from "./fxPairs-validated-named";
 
@@ -19,25 +20,25 @@ describe("Takes foreign-currency-rate pairs and returns only those which are val
 
 describe("Real-time currency search returns currencies matching the search criteria", () => {
   test("Entering a single letter returns all currencies with the currency code or any word of the currency name starting by the letter", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "e" })).toEqual([FX.ETB, FX.EUR, FX.XCD, FX.EGP]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterValue: "e" })).toEqual([FX.ETB, FX.EUR, FX.XCD, FX.EGP]);
   });
   test("Entering 2 letters returns all currencies with the currency code or any word of the currency name starting by the 2 letters", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "kr" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK, FX.KRW]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterValue: "kr" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK, FX.KRW]);
   });
   test("Entering 3 letters returns all currencies with the currency code matching the letters or any word of the currency name starting by the 3 letters", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "cad" })).toEqual([FX.CAD]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterValue: "cad" })).toEqual([FX.CAD]);
   });
   test("Entering a set of letters returns all currencies with the currency code matching the letters or any word of the currency name starting by the letters", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "kRo" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterValue: "kRo" })).toEqual([FX.SEK, FX.ISK, FX.DKK, FX.NOK]);
   });
   test("Search by currency name is case-insensitive", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "pOuNd" })).toEqual([FX.LBP, FX.SYP, FX.GBP, FX.EGP]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterValue: "pOuNd" })).toEqual([FX.LBP, FX.SYP, FX.GBP, FX.EGP]);
   });
   test("Search by currency code is case-insensitive", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "cZk" })).toEqual([FX.CZK]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterValue: "cZk" })).toEqual([FX.CZK]);
   });
   test("Search ignores any spacing", () => {
-    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterString: "mExIcA n Pe   SO" })).toEqual([FX.MXN]);
+    expect(filterFXByCodeAndName({ fxPairs: { ...validFXPairsMocked }, filterValue: "mExIcA n Pe   SO" })).toEqual([FX.MXN]);
   });
 });
 
