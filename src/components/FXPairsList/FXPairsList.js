@@ -1,17 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useRouteMatch, useParams } from "react-router-dom";
 import { handleLoadServerFXPairs } from "../../actions/fxPairs";
 import FXPair from "../FXPair/FXPair";
 import classes from "./FXPairsList.module.css";
 
 const filterFXByCodeAndName = function ({ fxPairs, filterValue }) {
-  let filterBy = filterValue.replace(/%20/gi, "").replace(/\s+/g, "").replace(/#/gi, "").toLowerCase();
   let results = Object.values(fxPairs).filter((fxPair) => {
-    let relevantCurrencyCodePart = fxPair.currency.toLowerCase().slice(0, filterBy.length);
+    let relevantCurrencyCodePart = fxPair.currency.toLowerCase().slice(0, filterValue.length);
     let currencyNameIndividualWords = fxPair.nameI18N.toLowerCase().split(" ");
-    let currencyNameConjoinedPart = fxPair.nameI18N.replace(/\s+/g, "").toLowerCase().slice(0, filterBy.length);
-    return relevantCurrencyCodePart === filterBy || currencyNameIndividualWords.some((word) => word.slice(0, filterBy.length) === filterBy) || currencyNameConjoinedPart === filterBy;
+    let currencyNameConjoinedPart = fxPair.nameI18N.replace(/\s+/g, "").toLowerCase().slice(0, filterValue.length);
+    return relevantCurrencyCodePart === filterValue || currencyNameIndividualWords.some((word) => word.startsWith(filterValue)) || currencyNameConjoinedPart === filterValue;
   });
   return results;
 };

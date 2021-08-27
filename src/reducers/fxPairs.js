@@ -11,7 +11,6 @@ export default function fxPairs(state = { data: {}, backup: {} }, action) {
       return {
         ...state,
         data: { ...validatedFXPairs },
-        backup: { ...validatedFXPairs },
       };
 
     default:
