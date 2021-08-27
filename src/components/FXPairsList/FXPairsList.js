@@ -17,7 +17,7 @@ export default function FXPairsList() {
   }, [dispatch]);
 
   const displayFXPairs = ({ fxPairs }) => {
-    let display = fxPairs.map((pair) => <FXPair currencyCode={pair.currency} key={pair.currency} />);
+    let display = fxPairs.map((pair) => <FXPair pairData={pair} currencyCode={pair.currency} key={pair.currency} />);
     if (display.length === 0) {
       display = <p>I'm sorry. I do not recognize the currency you are searching for. </p>;
     }
