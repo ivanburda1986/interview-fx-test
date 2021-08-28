@@ -5,7 +5,7 @@ export default function setFilterValue(state = { filterValue: "" }, action) {
     case SET_FILTER_VALUE:
       return {
         ...state,
-        filterValue: decodeURIComponent(action.filterValue).replace(/\s+/g, "").replace(/#/gi, "").toLowerCase(),
+        filterValue: action.filterValue,
       };
     default:
       return { ...state };

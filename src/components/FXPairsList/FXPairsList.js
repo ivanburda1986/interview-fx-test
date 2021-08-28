@@ -5,11 +5,12 @@ import FXPair from "../FXPair/FXPair";
 import classes from "./FXPairsList.module.css";
 
 const filterFXByCodeAndName = ({ fxPairs, filterValue }) => {
+  let trimmedFilterValue = decodeURIComponent(filterValue).replace(/\s+/g, "").replace(/#/gi, "").toLowerCase();
   let results = Object.values(fxPairs).filter((fxPair) => {
-    let relevantCurrencyCodePart = fxPair.currency.toLowerCase().slice(0, filterValue.length);
+    let relevantCurrencyCodePart = fxPair.currency.toLowerCase().slice(0, trimmedFilterValue.length);
     let currencyNameIndividualWords = fxPair.nameI18N.toLowerCase().split(" ");
-    let currencyNameConjoinedPart = fxPair.nameI18N.replace(/\s+/g, "").toLowerCase().slice(0, filterValue.length);
-    return relevantCurrencyCodePart === filterValue || currencyNameIndividualWords.some((word) => word.startsWith(filterValue)) || currencyNameConjoinedPart === filterValue;
+    let currencyNameConjoinedPart = fxPair.nameI18N.replace(/\s+/g, "").toLowerCase().slice(0, trimmedFilterValue.length);
+    return relevantCurrencyCodePart === trimmedFilterValue || currencyNameIndividualWords.some((word) => word.startsWith(trimmedFilterValue)) || currencyNameConjoinedPart === trimmedFilterValue;
   });
   return results;
 };
