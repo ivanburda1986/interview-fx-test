@@ -21,9 +21,8 @@ const Searchbar = () => {
     dispatch(setFilterValue(location.hash));
   };
 
-  //Trigger searching based on the Search input field change
-  const handleSearchViaInputField = (e) => {
-    e.preventDefault();
+  const handleSearch = (e) => {
+    console.log("HandleSearch");
     window.location.hash = e.target.value;
     setSearchString(e.target.value);
   };
@@ -33,7 +32,7 @@ const Searchbar = () => {
       <div className={classes.SearchbarContainer}>
         <div>
           <label htmlFor="searchbar">Search</label>
-          <input type="text" id="searchbar" placeholder="Currency code or name" value={searchString} onChange={(e) => handleSearchViaInputField(e)} />
+          <input type="text" id="searchbar" placeholder="Currency code or name" value={searchString} onChange={(e) => handleSearch(e)} />
         </div>
         <a href="https://github.com/ivanburda1986/interview-fx-test" target="_blank">
           <i className="fab fa-github"></i>
