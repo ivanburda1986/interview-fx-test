@@ -12,7 +12,6 @@ const Searchbar = () => {
   const [searchBarInput, setSearchBarInput] = React.useState("");
   const isFXPairsInitialLoadFinished = Object.values(useSelector((state) => state.fxPairs.backup));
 
-  //Trigger searching based on the URL-hash change
   React.useEffect(() => {
     dispatch(setFilterValue(location.hash));
     setSearchBarInput(decodeURIComponent(location.hash).replaceAll(/#/gi, ""));
@@ -23,8 +22,7 @@ const Searchbar = () => {
   const handleSearch = () => {
     setSearchBarInput(searchStringRef.current.value);
     dispatch(setFilterValue(searchStringRef.current.value));
-    console.log(location);
-    location.hash = searchStringRef.current.value;
+    window.location.hash = searchStringRef.current.value;
   };
 
   return (
