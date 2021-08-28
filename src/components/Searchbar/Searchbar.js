@@ -13,7 +13,7 @@ const Searchbar = () => {
 
   React.useEffect(() => {
     dispatch(setFilterValue(location.hash));
-    setSearchBarInput(decodeURIComponent(location.hash).replaceAll(/#/gi, ""));
+    setSearchBarInput(decodeURIComponent(location.hash).replace(/#/gi, ""));
   }, [location.hash, dispatch]);
 
   React.useEffect(() => {}, [filterValue]);
@@ -31,7 +31,7 @@ const Searchbar = () => {
           <label htmlFor="searchbar">Search</label>
           <input type="text" id="searchbar" placeholder="Currency code or name" value={searchBarInput} ref={searchStringRef} onChange={() => handleSearch()} />
         </div>
-        <a href="https://github.com/ivanburda1986/interview-fx-test" target="_blank">
+        <a href="https://github.com/ivanburda1986/interview-fx-test" target="_blank" rel="noreferrer">
           <i className="fab fa-github"></i>
         </a>
       </div>

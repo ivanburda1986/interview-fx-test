@@ -4,7 +4,7 @@ import { handleLoadServerFXPairs } from "../../actions/fxPairs";
 import FXPair from "../FXPair/FXPair";
 import classes from "./FXPairsList.module.css";
 
-const filterFXByCodeAndName = function ({ fxPairs, filterValue }) {
+const filterFXByCodeAndName = ({ fxPairs, filterValue }) => {
   let results = Object.values(fxPairs).filter((fxPair) => {
     let relevantCurrencyCodePart = fxPair.currency.toLowerCase().slice(0, filterValue.length);
     let currencyNameIndividualWords = fxPair.nameI18N.toLowerCase().split(" ");
@@ -23,7 +23,7 @@ export default function FXPairsList() {
 
   React.useEffect(() => {
     dispatch(handleLoadServerFXPairs());
-  }, []);
+  }, [dispatch]);
 
   React.useEffect(() => {
     setFilteredFxPairs(filterFXByCodeAndName({ fxPairs, filterValue }));
