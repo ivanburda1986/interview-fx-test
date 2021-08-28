@@ -18,6 +18,7 @@ export default function FXPairsList() {
   const dispatch = useDispatch();
   const filterValue = useSelector((state) => state.filter.filterValue);
   const fxPairs = Object.values(useSelector((state) => state.fxPairs.data));
+  const fxPairsLoaded = useSelector((state) => state.fxPairs.fxPairsLoaded);
   const [filteredFxPairs, setFilteredFxPairs] = React.useState([]);
 
   React.useEffect(() => {
@@ -26,12 +27,14 @@ export default function FXPairsList() {
 
   React.useEffect(() => {
     setFilteredFxPairs(filterFXByCodeAndName({ fxPairs, filterValue }));
-  }, [filterValue]);
+  }, [filterValue, fxPairsLoaded]);
 
   const displayFXPairs = ({ fxPairs, filteredFxPairs, filterValue }) => {
     let display = [];
-    let message = "Loading...";
-    if (filterValue && filteredFxPairs.length > 0) {
+    let message = "";
+    if (!fxPairsLoaded) {
+      message = "Loading...";
+    } else if (filterValue && filteredFxPairs.length > 0) {
       display = filteredFxPairs.map((fxPair) => <FXPair fxPairData={fxPair} currencyCode={fxPair.currency} key={fxPair.currency} />);
       message = "";
     } else if (filterValue && filteredFxPairs.length === 0) {

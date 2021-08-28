@@ -23,7 +23,7 @@ const FXPair = ({ fxPairData }) => {
   return (
     <div className={classes.FXPair}>
       <img src={flagImgSrc} alt={imgAlt} />
-      <p className={classes.CurrencyCode}>{fxPairData.currencyCode}</p>
+      <p className={classes.CurrencyCode}>{fxPairData.currency}</p>
       <p className={classes.CurrencyName}>{fxPairData.nameI18N}</p>
       <p className={classes.fXRate}>{fxPairData.exchangeRate.middle.toFixed(2)} / € </p>
     </div>

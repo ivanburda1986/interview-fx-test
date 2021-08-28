@@ -10,12 +10,11 @@ const Searchbar = () => {
   const filterValue = useSelector((state) => state.filter.filterValue);
   const searchStringRef = React.useRef("");
   const [searchBarInput, setSearchBarInput] = React.useState("");
-  const isFXPairsInitialLoadFinished = Object.values(useSelector((state) => state.fxPairs.backup));
 
   React.useEffect(() => {
     dispatch(setFilterValue(location.hash));
     setSearchBarInput(decodeURIComponent(location.hash).replaceAll(/#/gi, ""));
-  }, [location.hash]);
+  }, [location.hash, dispatch]);
 
   React.useEffect(() => {}, [filterValue]);
 
