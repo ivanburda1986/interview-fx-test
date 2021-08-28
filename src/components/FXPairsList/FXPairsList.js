@@ -17,6 +17,7 @@ const filterFXByCodeAndName = function ({ fxPairs, filterValue }) {
 export default function FXPairsList() {
   const dispatch = useDispatch();
   const filterValue = useSelector((state) => state.filter.filterValue);
+
   const fxPairs = Object.values(useSelector((state) => state.fxPairs.data));
   const [filteredFxPairs, setFilteredFxPairs] = React.useState([]);
 
@@ -25,6 +26,7 @@ export default function FXPairsList() {
   }, []);
 
   React.useEffect(() => {
+    console.log(filterValue);
     setFilteredFxPairs(filterFXByCodeAndName({ fxPairs, filterValue }));
   }, [filterValue]);
 
