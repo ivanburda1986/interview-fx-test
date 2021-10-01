@@ -1,24 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { handleLoadServerFXPairs } from "../../actions/fxPairs";
+import { filterFXByCodeAndName } from "./FXPairsListService";
 import FXPair from "../FXPair/FXPair";
 import classes from "./FXPairsList.module.css";
-
-const filterFXByCodeAndName = ({ fxPairs, filterValue }) => {
-  let trimmedFilterValue = decodeURIComponent(filterValue).replace(/\s+/g, "").replace(/#/gi, "").toLowerCase();
-  let results = Object.values(fxPairs).filter((fxPair) => {
-    let relevantCurrencyCodePart = fxPair.currency.toLowerCase().slice(0, trimmedFilterValue.length);
-    let currencyNameIndividualWords = fxPair.nameI18N.toLowerCase().split(" ");
-    let currencyNameConjoinedPart = fxPair.nameI18N.replace(/\s+/g, "").toLowerCase().slice(0, trimmedFilterValue.length);
-    return relevantCurrencyCodePart === trimmedFilterValue || currencyNameIndividualWords.some((word) => word.startsWith(trimmedFilterValue)) || currencyNameConjoinedPart === trimmedFilterValue;
-  });
-  return results;
-};
 
 export default function FXPairsList() {
   const dispatch = useDispatch();
   const filterValue = useSelector((state) => state.filter.filterValue);
-  const fxPairs = Object.values(useSelector((state) => state.fxPairs.data));
+  const fxPairs = useSelector((state) => state.fxPairs.data);
   const fxPairsLoaded = useSelector((state) => state.fxPairs.fxPairsLoaded);
   const [filteredFxPairs, setFilteredFxPairs] = React.useState([]);
 
@@ -28,29 +18,27 @@ export default function FXPairsList() {
 
   React.useEffect(() => {
     setFilteredFxPairs(filterFXByCodeAndName({ fxPairs, filterValue }));
-  }, [filterValue, fxPairsLoaded]);
+  }, [filterValue, fxPairs]);
 
-  const displayFXPairs = ({ fxPairs, filteredFxPairs, filterValue }) => {
-    let display = [];
-    let message = "";
-    if (!fxPairsLoaded) {
-      message = "Loading...";
-    } else if (filterValue && filteredFxPairs.length > 0) {
-      display = filteredFxPairs.map((fxPair) => <FXPair fxPairData={fxPair} currencyCode={fxPair.currency} key={fxPair.currency} />);
-      message = "";
-    } else if (filterValue && filteredFxPairs.length === 0) {
-      message = "I'm sorry. I do not recognize the currency you are searching for. ";
-    } else {
-      message = "";
-      display = fxPairs.map((fxPair) => <FXPair fxPairData={fxPair} currencyCode={fxPair.currency} key={fxPair.currency} />);
-    }
-    return { display, message };
-  };
+  if (!fxPairsLoaded) {
+    return <p>Loading...</p>;
+  }
+
+  if (!filteredFxPairs.length) {
+    return (
+      <p>I'm sorry. I do not recognize the currency you are searching for.</p>
+    );
+  }
 
   return (
     <div className={classes.FXPairs}>
-      {displayFXPairs({ fxPairs, filteredFxPairs, filterValue }).message}
-      {displayFXPairs({ fxPairs, filteredFxPairs, filterValue }).display}
+      {filteredFxPairs.map((fxPair) => (
+        <FXPair
+          fxPairData={fxPair}
+          currencyCode={fxPair.currency}
+          key={fxPair.currency}
+        />
+      ))}
     </div>
   );
 }

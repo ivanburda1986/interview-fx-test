@@ -4,4 +4,10 @@
   justify-content: center;
   align-items: center;
   color: var(--dark);
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: var(--dark);
 }

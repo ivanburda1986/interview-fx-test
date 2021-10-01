@@ -1,4 +1,4 @@
-{
+[
   "0": {
     "currency": "FJD",
     "precision": 2,
@@ -580,4 +580,4 @@
     "banknoteRate": { "buy": 3.8, "middle": 4.3, "sell": 4.8, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   }
-}
+]

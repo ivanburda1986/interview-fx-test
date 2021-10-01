@@ -8,13 +8,19 @@ const FXPair = ({ fxPairData }) => {
 
   React.useEffect(() => {
     (async function fetchImg() {
-      await import(`../../flags/${fxPairData.currency.slice(0, 2).toLowerCase()}.png`)
+      await import(
+        `../../flags/${fxPairData.currency.slice(0, 2).toLowerCase()}.png`
+      )
         .then((image) => {
-          setImgAlt(`Flag of the country with the currency: ${fxPairData.currency}`);
+          setImgAlt(
+            `Flag of the country with the currency: ${fxPairData.currency}`
+          );
           setFlagImgSrc(image.default);
         })
         .catch(() => {
-          setImgAlt(`A placeholder image - a flag for this currency is unavailable.`);
+          setImgAlt(
+            `A placeholder image - a flag for this currency is unavailable.`
+          );
           setFlagImgSrc(placeholderFlag);
         });
     })();
@@ -25,7 +31,9 @@ const FXPair = ({ fxPairData }) => {
       <img src={flagImgSrc} alt={imgAlt} />
       <p className={classes.CurrencyCode}>{fxPairData.currency}</p>
       <p className={classes.CurrencyName}>{fxPairData.nameI18N}</p>
-      <p className={classes.fXRate}>{fxPairData.exchangeRate.middle.toFixed(2)} / € </p>
+      <p className={classes.fXRate}>
+        {fxPairData.exchangeRate.middle.toFixed(2)} / €{" "}
+      </p>
     </div>
   );
 };
