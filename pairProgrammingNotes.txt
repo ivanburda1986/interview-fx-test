@@ -1,12 +1,9 @@
+Next steps: 
+-Use index files for exporting and importing 
+-Use name exports instead of default ones 
+-Refactor to typescript
+
 Redux boilerplate: Redux Toolkit
 
-Saas:
--how to setup export of individual css files for individual components
-
-
-
-
 Feedback
--use index files for exporting and importing
--use name imports/exports instead of default ones
 Searchbar - Callback, caches the function so that upon refresh can use it from memory; the function loads again only when a dependency of the useCallback changes
