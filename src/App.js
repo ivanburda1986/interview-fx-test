@@ -1,6 +1,6 @@
 import { Header } from "./components/Header";
-import Searchbar from "./components/Searchbar/Searchbar";
-import FXPairsList from "./components/FXPairsList/FXPairsList";
+import { FXPairsList } from "./components/FXPairsList";
+import { Searchbar } from "./components/Searchbar";
 
 function App() {
   return (

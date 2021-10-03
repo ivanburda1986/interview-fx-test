@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { handleLoadServerFXPairs } from "../../actions/fxPairs";
-import { filterFXByCodeAndName } from "./FXPairsListService";
-import FXPair from "../FXPair/FXPair";
+import { filterFXByCodeAndName } from "./index";
+import { FXPair } from "../FXPair";
 import classes from "./FXPairsList.module.css";
 
-export default function FXPairsList() {
+export const FXPairsList = () => {
   const dispatch = useDispatch();
   const filterValue = useSelector((state) => state.filter.filterValue);
   const fxPairs = useSelector((state) => state.fxPairs.data);
@@ -25,22 +25,14 @@ export default function FXPairsList() {
   }
 
   if (!filteredFxPairs.length) {
-    return (
-      <p>I'm sorry. I do not recognize the currency you are searching for.</p>
-    );
+    return <p>I'm sorry. I do not recognize the currency you are searching for.</p>;
   }
 
   return (
     <div className={classes.FXPairs}>
       {filteredFxPairs.map((fxPair) => (
-        <FXPair
-          fxPairData={fxPair}
-          currencyCode={fxPair.currency}
-          key={fxPair.currency}
-        />
+        <FXPair fxPairData={fxPair} currencyCode={fxPair.currency} key={fxPair.currency} />
       ))}
     </div>
   );
-}
-
-export { filterFXByCodeAndName };
+};
