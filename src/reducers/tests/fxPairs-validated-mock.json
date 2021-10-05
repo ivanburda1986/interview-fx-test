@@ -1,5 +1,5 @@
 [
-  "0": {
+  {
     "currency": "FJD",
     "precision": 2,
     "nameI18N": "Fiji Dollar",
@@ -7,7 +7,7 @@
     "banknoteRate": { "buy": 2.2, "middle": 2.4, "sell": 2.6, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "1": {
+  {
     "currency": "MXN",
     "precision": 2,
     "nameI18N": "Mexican Peso",
@@ -15,7 +15,7 @@
     "banknoteRate": { "buy": 21.1, "middle": 22.6, "sell": 24.1, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "2": {
+  {
     "currency": "SCR",
     "precision": 2,
     "nameI18N": "Seychelles-Rupee",
@@ -23,7 +23,7 @@
     "banknoteRate": { "buy": 14.167, "middle": 15.667, "sell": 17.167, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "3": {
+  {
     "currency": "BBD",
     "precision": 2,
     "nameI18N": "Barbados Dollar",
@@ -31,9 +31,9 @@
     "banknoteRate": { "buy": 1.948, "middle": 2.288, "sell": 2.628, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "4": { "currency": "CLP", "precision": 0, "nameI18N": "Chilian Peso", "exchangeRate": { "buy": 635.5166, "middle": 663.0166, "sell": 690.5166, "indicator": 0, "lastModified": "2011-07-24T22:00:00Z" }, "flags": ["provided"] },
-  "5": { "currency": "UGX", "precision": 0, "nameI18N": "Uganda Shilling", "exchangeRate": { "buy": 4052.106, "middle": 4252.106, "sell": 4452.106, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "6": {
+  { "currency": "CLP", "precision": 0, "nameI18N": "Chilian Peso", "exchangeRate": { "buy": 635.5166, "middle": 663.0166, "sell": 690.5166, "indicator": 0, "lastModified": "2011-07-24T22:00:00Z" }, "flags": ["provided"] },
+  { "currency": "UGX", "precision": 0, "nameI18N": "Uganda Shilling", "exchangeRate": { "buy": 4052.106, "middle": 4252.106, "sell": 4452.106, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "ZAR",
     "precision": 2,
     "nameI18N": "South African Rand",
@@ -42,7 +42,7 @@
     "banknoteRate": { "buy": 14.9385, "middle": 16.014, "sell": 17.0895, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "7": {
+  {
     "currency": "TND",
     "precision": 3,
     "nameI18N": "Tunisian Dinar",
@@ -50,7 +50,7 @@
     "banknoteRate": { "buy": 3.10075, "middle": 3.302, "sell": 3.50325, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "8": {
+  {
     "currency": "BSD",
     "precision": 2,
     "nameI18N": "Bahamanian-Dollar",
@@ -58,9 +58,9 @@
     "banknoteRate": { "buy": 0.989, "middle": 1.149, "sell": 1.309, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "9": { "currency": "SLL", "precision": 2, "nameI18N": "Sierra Leone Leone", "exchangeRate": { "buy": 9633.3375, "middle": 9728.3375, "sell": 9823.3375, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "10": { "currency": "IQD", "precision": 3, "nameI18N": "Iraqi Dinar", "exchangeRate": { "buy": 1303.7024, "middle": 1353.7024, "sell": 1403.7024, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "11": {
+  { "currency": "SLL", "precision": 2, "nameI18N": "Sierra Leone Leone", "exchangeRate": { "buy": 9633.3375, "middle": 9728.3375, "sell": 9823.3375, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  { "currency": "IQD", "precision": 3, "nameI18N": "Iraqi Dinar", "exchangeRate": { "buy": 1303.7024, "middle": 1353.7024, "sell": 1403.7024, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "TWD",
     "precision": 2,
     "nameI18N": "Taiwan Dollar",
@@ -68,7 +68,7 @@
     "banknoteRate": { "buy": 29.2, "middle": 35.2, "sell": 41.2, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "12": {
+  {
     "currency": "RSD",
     "precision": 2,
     "nameI18N": "Serbian dinar",
@@ -77,7 +77,7 @@
     "banknoteRate": { "buy": 113.4, "middle": 118.3, "sell": 123.2, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "13": {
+  {
     "currency": "DOP",
     "precision": 2,
     "nameI18N": "Dominican R. Peso",
@@ -85,7 +85,7 @@
     "banknoteRate": { "buy": 52.7, "middle": 57.2, "sell": 61.7, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "14": {
+  {
     "currency": "MYR",
     "precision": 2,
     "nameI18N": "Malaysian Ringgit",
@@ -93,7 +93,7 @@
     "banknoteRate": { "buy": 4.3775, "middle": 4.784, "sell": 5.1905, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "15": {
+  {
     "currency": "MAD",
     "precision": 2,
     "nameI18N": "Moroccan Dirham",
@@ -101,7 +101,7 @@
     "banknoteRate": { "buy": 9.85, "middle": 10.9, "sell": 11.95, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "16": {
+  {
     "currency": "OMR",
     "precision": 3,
     "nameI18N": "Omani Rial",
@@ -109,8 +109,8 @@
     "banknoteRate": { "buy": 0.427, "middle": 0.442, "sell": 0.457, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "17": { "currency": "PGK", "precision": 2, "nameI18N": "Papua New Guinea Kina", "exchangeRate": { "buy": 0.2631, "middle": 0.3381, "sell": 0.4131, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "18": {
+  { "currency": "PGK", "precision": 2, "nameI18N": "Papua New Guinea Kina", "exchangeRate": { "buy": 0.2631, "middle": 0.3381, "sell": 0.4131, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "KES",
     "precision": 2,
     "nameI18N": "Kenyan Shilling",
@@ -118,7 +118,7 @@
     "banknoteRate": { "buy": 100.4, "middle": 117, "sell": 133.6, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "19": {
+  {
     "currency": "SEK",
     "precision": 2,
     "nameI18N": "Swedish Krona",
@@ -127,7 +127,7 @@
     "banknoteRate": { "buy": 10.1555, "middle": 10.32, "sell": 10.4845, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "20": {
+  {
     "currency": "ARS",
     "precision": 2,
     "nameI18N": "Argentine Peso",
@@ -135,7 +135,7 @@
     "banknoteRate": { "buy": 40.6, "middle": 40.9, "sell": 41.2, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "21": {
+  {
     "currency": "QAR",
     "precision": 2,
     "nameI18N": "Qatari Rial",
@@ -143,9 +143,9 @@
     "banknoteRate": { "buy": 3.8755, "middle": 4.182, "sell": 4.4885, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "22": { "currency": "IRR", "precision": 2, "nameI18N": "Iranian Rial", "exchangeRate": { "buy": 47399, "middle": 47649, "sell": 47899, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "23": { "currency": "MRO", "precision": 2, "nameI18N": "Mauritanian Ouguiya", "exchangeRate": { "buy": 375.5838, "middle": 405.5838, "sell": 435.5838, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "24": {
+  { "currency": "IRR", "precision": 2, "nameI18N": "Iranian Rial", "exchangeRate": { "buy": 47399, "middle": 47649, "sell": 47899, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  { "currency": "MRO", "precision": 2, "nameI18N": "Mauritanian Ouguiya", "exchangeRate": { "buy": 375.5838, "middle": 405.5838, "sell": 435.5838, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "CNY",
     "precision": 2,
     "nameI18N": "Chinese Yuan Renminbi",
@@ -153,7 +153,7 @@
     "banknoteRate": { "buy": 6.25, "middle": 7.9, "sell": 9.55, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "25": {
+  {
     "currency": "THB",
     "precision": 2,
     "nameI18N": "Thai Baht",
@@ -162,7 +162,7 @@
     "banknoteRate": { "buy": 32.55, "middle": 37.7, "sell": 42.85, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "26": {
+  {
     "currency": "XPF",
     "precision": 0,
     "nameI18N": "CFP-Franc",
@@ -170,9 +170,9 @@
     "banknoteRate": { "buy": 101.7, "middle": 119.2, "sell": 136.7, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "27": { "currency": "BDT", "precision": 2, "nameI18N": "Bangladeshi Taka", "exchangeRate": { "buy": 92.2927, "middle": 95.0427, "sell": 97.7927, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "28": { "currency": "LYD", "precision": 3, "nameI18N": "Libyian Dinar", "exchangeRate": { "buy": 1.5131, "middle": 1.5781, "sell": 1.6431, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "29": {
+  { "currency": "BDT", "precision": 2, "nameI18N": "Bangladeshi Taka", "exchangeRate": { "buy": 92.2927, "middle": 95.0427, "sell": 97.7927, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  { "currency": "LYD", "precision": 3, "nameI18N": "Libyian Dinar", "exchangeRate": { "buy": 1.5131, "middle": 1.5781, "sell": 1.6431, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "BMD",
     "precision": 2,
     "nameI18N": "Bermudian-Dollar",
@@ -180,7 +180,7 @@
     "banknoteRate": { "buy": 0.899, "middle": 1.149, "sell": 1.399, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "30": {
+  {
     "currency": "KWD",
     "precision": 3,
     "nameI18N": "Kuwaiti-Dinar",
@@ -188,7 +188,7 @@
     "banknoteRate": { "buy": 0.3215, "middle": 0.349, "sell": 0.3765, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "31": {
+  {
     "currency": "PHP",
     "precision": 2,
     "nameI18N": "Philippine Peso",
@@ -196,7 +196,7 @@
     "banknoteRate": { "buy": 51.6, "middle": 60.6, "sell": 69.6, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "32": {
+  {
     "currency": "RUB",
     "precision": 2,
     "nameI18N": "Russian Rouble",
@@ -205,7 +205,7 @@
     "banknoteRate": { "buy": 70.7, "middle": 75.7, "sell": 80.7, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "33": {
+  {
     "currency": "ISK",
     "precision": 0,
     "nameI18N": "Iceland Krona",
@@ -213,7 +213,7 @@
     "banknoteRate": { "buy": 121.1, "middle": 138.1, "sell": 155.1, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "34": {
+  {
     "currency": "JMD",
     "precision": 2,
     "nameI18N": "Jamaican Dollar",
@@ -221,9 +221,9 @@
     "banknoteRate": { "buy": 136, "middle": 146, "sell": 156, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "35": { "currency": "COP", "precision": 2, "nameI18N": "Colombian Peso", "exchangeRate": { "buy": 3352.0218, "middle": 3577.0218, "sell": 3802.0218, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "36": { "currency": "MKD", "precision": 2, "nameI18N": "Macedonia Denar", "exchangeRate": { "buy": 54.0126, "middle": 61.5126, "sell": 69.0126, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "37": {
+  { "currency": "COP", "precision": 2, "nameI18N": "Colombian Peso", "exchangeRate": { "buy": 3352.0218, "middle": 3577.0218, "sell": 3802.0218, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  { "currency": "MKD", "precision": 2, "nameI18N": "Macedonia Denar", "exchangeRate": { "buy": 54.0126, "middle": 61.5126, "sell": 69.0126, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "USD",
     "precision": 2,
     "nameI18N": "US Dollar",
@@ -232,8 +232,8 @@
     "banknoteRate": { "buy": 1.131, "middle": 1.149, "sell": 1.167, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "38": { "currency": "DZD", "precision": 2, "nameI18N": "Algerian Dinar", "exchangeRate": { "buy": 125.6, "middle": 134.6, "sell": 143.6, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "39": {
+  { "currency": "DZD", "precision": 2, "nameI18N": "Algerian Dinar", "exchangeRate": { "buy": 125.6, "middle": 134.6, "sell": 143.6, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "SGD",
     "precision": 2,
     "nameI18N": "Singapore-Dollar",
@@ -242,8 +242,8 @@
     "banknoteRate": { "buy": 1.474, "middle": 1.573, "sell": 1.672, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "40": { "currency": "ETB", "precision": 2, "nameI18N": "Ethiopian Birr", "exchangeRate": { "buy": 30.4252, "middle": 31.6752, "sell": 32.9252, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "41": {
+  { "currency": "ETB", "precision": 2, "nameI18N": "Ethiopian Birr", "exchangeRate": { "buy": 30.4252, "middle": 31.6752, "sell": 32.9252, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "BND",
     "precision": 2,
     "nameI18N": "Brunei-Dollar",
@@ -251,7 +251,7 @@
     "banknoteRate": { "buy": 1.543, "middle": 1.573, "sell": 1.603, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "42": {
+  {
     "currency": "XAF",
     "precision": 0,
     "nameI18N": "CFA Franc BEAC",
@@ -259,7 +259,7 @@
     "banknoteRate": { "buy": 557, "middle": 665, "sell": 773, "indicator": 0, "lastModified": "2008-08-06T22:00:00Z" },
     "flags": ["provided"]
   },
-  "43": {
+  {
     "currency": "CHF",
     "precision": 2,
     "nameI18N": "Swiss Franc",
@@ -268,7 +268,7 @@
     "banknoteRate": { "buy": 1.111, "middle": 1.144, "sell": 1.177, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "44": {
+  {
     "currency": "HRK",
     "precision": 2,
     "nameI18N": "Croatian Kuna",
@@ -277,7 +277,7 @@
     "banknoteRate": { "buy": 7.236, "middle": 7.436, "sell": 7.636, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "45": {
+  {
     "currency": "VND",
     "precision": 2,
     "nameI18N": "Vietnamese dong",
@@ -285,7 +285,7 @@
     "banknoteRate": { "buy": 24293, "middle": 26793, "sell": 29293, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "46": {
+  {
     "currency": "AUD",
     "precision": 2,
     "nameI18N": "Australian Dollar",
@@ -294,7 +294,7 @@
     "banknoteRate": { "buy": 1.527, "middle": 1.575, "sell": 1.623, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "47": {
+  {
     "currency": "ILS",
     "precision": 2,
     "nameI18N": "Israeli New Shekel",
@@ -303,8 +303,8 @@
     "banknoteRate": { "buy": 3.7495, "middle": 4.214, "sell": 4.6785, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "48": { "currency": "BOB", "precision": 2, "nameI18N": "Bolivian Boliviano", "exchangeRate": { "buy": 8.4943, "middle": 9.3443, "sell": 10.1943, "indicator": 0, "lastModified": "2013-01-22T23:00:00Z" }, "flags": ["provided"] },
-  "49": {
+  { "currency": "BOB", "precision": 2, "nameI18N": "Bolivian Boliviano", "exchangeRate": { "buy": 8.4943, "middle": 9.3443, "sell": 10.1943, "indicator": 0, "lastModified": "2013-01-22T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "IDR",
     "precision": 2,
     "nameI18N": "Indonesian Rupiah",
@@ -312,8 +312,8 @@
     "banknoteRate": { "buy": 13473.6, "middle": 16746.6, "sell": 20019.6, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "50": { "currency": "KYD", "precision": 2, "nameI18N": "Cayman Islands dollar", "exchangeRate": { "buy": 0.8836, "middle": 0.9436, "sell": 1.0036, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "51": {
+  { "currency": "KYD", "precision": 2, "nameI18N": "Cayman Islands dollar", "exchangeRate": { "buy": 0.8836, "middle": 0.9436, "sell": 1.0036, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "TRY",
     "precision": 2,
     "nameI18N": "Turkish Lira (new)",
@@ -322,8 +322,8 @@
     "banknoteRate": { "buy": 5.632, "middle": 6.132, "sell": 6.632, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "52": { "currency": "LBP", "precision": 2, "nameI18N": "Lebanese Pound", "exchangeRate": { "buy": 1496.4985, "middle": 1716.4985, "sell": 1936.4985, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "53": {
+  { "currency": "LBP", "precision": 2, "nameI18N": "Lebanese Pound", "exchangeRate": { "buy": 1496.4985, "middle": 1716.4985, "sell": 1936.4985, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "JOD",
     "precision": 3,
     "nameI18N": "Jordanian Dinar",
@@ -331,7 +331,7 @@
     "banknoteRate": { "buy": 0.7265, "middle": 0.815, "sell": 0.9035, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "54": {
+  {
     "currency": "AED",
     "precision": 2,
     "nameI18N": "Dirham",
@@ -339,7 +339,7 @@
     "banknoteRate": { "buy": 3.9075, "middle": 4.219, "sell": 4.5305, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "55": {
+  {
     "currency": "HKD",
     "precision": 2,
     "nameI18N": "Hongkong Dollar",
@@ -348,7 +348,7 @@
     "banknoteRate": { "buy": 8.0315, "middle": 8.99, "sell": 9.9485, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "56": {
+  {
     "currency": "EUR",
     "precision": 2,
     "nameI18N": "Euro",
@@ -357,7 +357,7 @@
     "banknoteRate": { "buy": 1, "middle": 1, "sell": 1, "indicator": 0, "lastModified": "2008-08-06T22:00:00Z" },
     "flags": ["provided", "tradingProhibited"]
   },
-  "57": {
+  {
     "currency": "DKK",
     "precision": 2,
     "nameI18N": "Danish Krone",
@@ -366,7 +366,7 @@
     "banknoteRate": { "buy": 7.338, "middle": 7.46, "sell": 7.582, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "58": {
+  {
     "currency": "CAD",
     "precision": 2,
     "nameI18N": "Canadian Dollar",
@@ -375,7 +375,7 @@
     "banknoteRate": { "buy": 1.4695, "middle": 1.502, "sell": 1.5345, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "59": {
+  {
     "currency": "BGN",
     "precision": 2,
     "nameI18N": "Bulgarian New Lew",
@@ -383,7 +383,7 @@
     "banknoteRate": { "buy": 1.917, "middle": 1.956, "sell": 1.995, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "60": {
+  {
     "currency": "MMK",
     "precision": 2,
     "nameI18N": "Myanmar Kyat",
@@ -391,7 +391,7 @@
     "banknoteRate": { "buy": 1828.1, "middle": 1829.1, "sell": 1830.1, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "61": {
+  {
     "currency": "MUR",
     "precision": 2,
     "nameI18N": "Mauritius Rupee",
@@ -399,7 +399,7 @@
     "banknoteRate": { "buy": 37.55, "middle": 39.8, "sell": 42.05, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "62": {
+  {
     "currency": "NOK",
     "precision": 2,
     "nameI18N": "Norwegian Kroner",
@@ -408,7 +408,7 @@
     "banknoteRate": { "buy": 9.383, "middle": 9.527, "sell": 9.671, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "63": {
+  {
     "currency": "SYP",
     "precision": 2,
     "nameI18N": "Syrian Pound",
@@ -416,7 +416,7 @@
     "banknoteRate": { "buy": 25.58, "middle": 28.138, "indicator": 0, "lastModified": "2008-08-06T22:00:00Z" },
     "flags": ["provided"]
   },
-  "64": {
+  {
     "currency": "RON",
     "precision": 2,
     "nameI18N": "Romanian Leu New",
@@ -424,7 +424,7 @@
     "banknoteRate": { "buy": 4.412, "middle": 4.662, "sell": 4.912, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "65": {
+  {
     "currency": "LKR",
     "precision": 2,
     "nameI18N": "Sri-Lanka-Rupee",
@@ -432,8 +432,8 @@
     "banknoteRate": { "buy": 168.7, "middle": 200.7, "sell": 232.7, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "66": { "currency": "NGN", "precision": 2, "nameI18N": "Nigerian Naira", "exchangeRate": { "buy": 335.1108, "middle": 347.6108, "sell": 360.1108, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "67": {
+  { "currency": "NGN", "precision": 2, "nameI18N": "Nigerian Naira", "exchangeRate": { "buy": 335.1108, "middle": 347.6108, "sell": 360.1108, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "CZK",
     "precision": 2,
     "nameI18N": "Czech Koruna",
@@ -442,7 +442,7 @@
     "banknoteRate": { "buy": 24.55, "middle": 25.9, "sell": 27.25, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "68": {
+  {
     "currency": "PKR",
     "precision": 2,
     "nameI18N": "Pakistan Rupee",
@@ -450,7 +450,7 @@
     "banknoteRate": { "buy": 126.5, "middle": 153.5, "sell": 180.5, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "69": {
+  {
     "currency": "XCD",
     "precision": 2,
     "nameI18N": "East Caribbean Dollar",
@@ -458,7 +458,7 @@
     "banknoteRate": { "buy": 2.81, "middle": 3.11, "sell": 3.41, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "70": {
+  {
     "currency": "BHD",
     "precision": 3,
     "nameI18N": "Bahraini-Dinar",
@@ -466,7 +466,7 @@
     "banknoteRate": { "buy": 0.403, "middle": 0.433, "sell": 0.463, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "71": {
+  {
     "currency": "LTL",
     "precision": 2,
     "nameI18N": "Lithuanian Litas",
@@ -475,7 +475,7 @@
     "banknoteRate": { "buy": 3.353, "middle": 3.453, "sell": 3.553, "indicator": 0, "lastModified": "2014-12-29T23:00:00Z" },
     "flags": ["provided"]
   },
-  "72": {
+  {
     "currency": "SAR",
     "precision": 2,
     "nameI18N": "Saudi Riyal",
@@ -483,7 +483,7 @@
     "banknoteRate": { "buy": 3.9885, "middle": 4.31, "sell": 4.6315, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "73": {
+  {
     "currency": "TTD",
     "precision": 2,
     "nameI18N": "Trinidad- and Tobago-Dollar",
@@ -491,8 +491,8 @@
     "banknoteRate": { "buy": 6.742, "middle": 7.742, "sell": 8.742, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "74": { "currency": "YER", "precision": 2, "nameI18N": "Jemen-Rial", "exchangeRate": { "buy": 263.6817, "middle": 283.6817, "sell": 303.6817, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "75": {
+  { "currency": "YER", "precision": 2, "nameI18N": "Jemen-Rial", "exchangeRate": { "buy": 263.6817, "middle": 283.6817, "sell": 303.6817, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "MVR",
     "precision": 2,
     "nameI18N": "Maldive Rufiiyaa",
@@ -500,8 +500,8 @@
     "banknoteRate": { "buy": 15.4, "middle": 17.8, "sell": 20.2, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "76": { "currency": "AFN", "precision": 2, "nameI18N": "Afghan Afghani", "exchangeRate": { "buy": 78.6653, "middle": 86.1653, "sell": 93.6653, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "77": {
+  { "currency": "AFN", "precision": 2, "nameI18N": "Afghan Afghani", "exchangeRate": { "buy": 78.6653, "middle": 86.1653, "sell": 93.6653, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "INR",
     "precision": 2,
     "nameI18N": "Indian Rupee",
@@ -509,7 +509,7 @@
     "banknoteRate": { "buy": 73.7, "middle": 83.3, "sell": 92.9, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "78": {
+  {
     "currency": "KRW",
     "precision": 0,
     "nameI18N": "South-Korean Won",
@@ -517,7 +517,7 @@
     "banknoteRate": { "buy": 1080, "middle": 1280, "sell": 1480, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "79": {
+  {
     "currency": "NPR",
     "precision": 2,
     "nameI18N": "Nepalese Rupee",
@@ -525,7 +525,7 @@
     "banknoteRate": { "buy": 126.2, "middle": 134.2, "sell": 142.2, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "80": {
+  {
     "currency": "JPY",
     "precision": 0,
     "nameI18N": "Japanese Yen",
@@ -534,7 +534,7 @@
     "banknoteRate": { "buy": 127.55, "middle": 130, "sell": 132.45, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "81": {
+  {
     "currency": "PLN",
     "precision": 2,
     "nameI18N": "Polish Zloty",
@@ -543,7 +543,7 @@
     "banknoteRate": { "buy": 3.807, "middle": 4.291, "sell": 4.775, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "82": {
+  {
     "currency": "GBP",
     "precision": 2,
     "nameI18N": "British Pound",
@@ -551,10 +551,10 @@
     "banknoteRate": { "buy": 0.8615, "middle": 0.873, "sell": 0.8845, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "83": { "currency": "HUF", "precision": 2, "nameI18N": "Hungarian Forint", "denominations": [20000, 10000, 5000, 2000, 1000, 500], "exchangeRate": { "buy": 317.05, "middle": 321.45, "sell": 325.85, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "84": { "currency": "MWK", "precision": 2, "nameI18N": "Malawi Kwacha", "exchangeRate": { "buy": 820.181, "middle": 827.181, "sell": 834.181, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "85": { "currency": "EGP", "precision": 2, "nameI18N": "Egyptian Pound", "denominations": [100, 50, 20, 10], "exchangeRate": { "buy": 20.1189, "middle": 20.3189, "sell": 20.5189, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "86": {
+  { "currency": "HUF", "precision": 2, "nameI18N": "Hungarian Forint", "denominations": [20000, 10000, 5000, 2000, 1000, 500], "exchangeRate": { "buy": 317.05, "middle": 321.45, "sell": 325.85, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  { "currency": "MWK", "precision": 2, "nameI18N": "Malawi Kwacha", "exchangeRate": { "buy": 820.181, "middle": 827.181, "sell": 834.181, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  { "currency": "EGP", "precision": 2, "nameI18N": "Egyptian Pound", "denominations": [100, 50, 20, 10], "exchangeRate": { "buy": 20.1189, "middle": 20.3189, "sell": 20.5189, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "NAD",
     "precision": 2,
     "nameI18N": "Namibia-Dollar",
@@ -562,8 +562,8 @@
     "banknoteRate": { "buy": 14.91, "middle": 16.01, "sell": 17.11, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "87": { "currency": "PEN", "precision": 2, "nameI18N": "Peruvian Sol", "exchangeRate": { "buy": 3.3176, "middle": 3.8176, "sell": 4.3176, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
-  "88": {
+  { "currency": "PEN", "precision": 2, "nameI18N": "Peruvian Sol", "exchangeRate": { "buy": 3.3176, "middle": 3.8176, "sell": 4.3176, "indicator": 0, "lastModified": "2018-11-08T23:00:00Z" }, "flags": ["provided"] },
+  {
     "currency": "NZD",
     "precision": 2,
     "nameI18N": "New Zealand Dollar",
@@ -572,7 +572,7 @@
     "banknoteRate": { "buy": 1.54, "middle": 1.695, "sell": 1.85, "indicator": 0, "lastModified": "2018-11-06T23:00:00Z" },
     "flags": ["provided"]
   },
-  "89": {
+  {
     "currency": "BRL",
     "precision": 2,
     "nameI18N": "Brazilian Real",
