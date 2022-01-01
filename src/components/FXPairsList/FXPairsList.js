@@ -21,11 +21,11 @@ export const FXPairsList = () => {
   }, [filterValue, fxPairs]);
 
   if (!fxPairsLoaded) {
-    return <p>Loading...</p>;
+    return <p className={classes.message}>Loading...</p>;
   }
 
   if (!filteredFxPairs.length) {
-    return <p>I'm sorry. I do not recognize the currency you are searching for.</p>;
+    return <p className={classes.message}>I'm sorry. I do not recognize the currency you are searching for.</p>;
   }
 
   return (

@@ -11,3 +11,8 @@
   text-align: center;
   color: var(--dark);
 }
+
+.message {
+  text-align: center;
+  color: var(--dark);
+}
