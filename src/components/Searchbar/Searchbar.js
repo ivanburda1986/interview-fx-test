@@ -12,7 +12,7 @@ export const Searchbar = () => {
   const [searchBarInput, setSearchBarInput] = React.useState("");
 
   React.useEffect(() => {
-    const filterValue = decodeURIComponent(location.hash).replace(/#/gi, "").toLowerCase();
+    const filterValue = decodeURIComponent(location.hash).replace(/#/gi, "");
     dispatch(setFilterValue(filterValue));
     setSearchBarInput(filterValue);
   }, [location.hash, dispatch]);
